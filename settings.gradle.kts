@@ -14,6 +14,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Compose Article"
+rootProject.name = "Task Manager"
 include(":app")
 
