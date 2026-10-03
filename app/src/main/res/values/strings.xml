@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">My Information</string>
+    <string name="full_name">Улискин Даниил Евгеньевич</string>
+    <string name="student_group">Студент группы ФИТ-241</string>
+    <string name="phone">8 951 111-11-11</string>
+    <string name="social_handle">@dan.ya42</string>
+    <string name="email">daniil@mail.ru</string>
+    <string name="profile_image_description">Профиль пользователя</string>
+    <string name="phone_description">Телефон</string>
+    <string name="social_description">Социальная сеть</string>
+    <string name="email_description">Электронная почта</string>
+</resources>
+
