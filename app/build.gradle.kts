@@ -8,7 +8,7 @@ android {
     compileSdk = 37
 
     defaultConfig {
-        applicationId = "com.example.lab3.taskmanager"
+        applicationId = "com.example.lab3.composequadrant"
         minSdk = 24
         targetSdk = 37
         versionCode = 1
