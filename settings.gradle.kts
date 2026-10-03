@@ -14,6 +14,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Compose Quadrant"
+rootProject.name = "My Information"
 include(":app")
 

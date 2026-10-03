@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Compose Quadrant</string>
-    <string name="text_title">Text composable</string>
-    <string name="text_description">Displays text and follows the recommended Material Design guidelines.</string>
-    <string name="image_title">Image composable</string>
-    <string name="image_description">Creates a composable that lays out and draws a given Painter class object.</string>
-    <string name="row_title">Row composable</string>
-    <string name="row_description">A layout composable that places its children in a horizontal sequence.</string>
-    <string name="column_title">Column composable</string>
-    <string name="column_description">A layout composable that places its children in a vertical sequence.</string>
+    <string name="app_name">My Information</string>
+    <string name="full_name">Улискин Даниил Евгеньевич</string>
+    <string name="student_group">Студент группы ФИТ-241</string>
+    <string name="phone">8 951 111-11-11</string>
+    <string name="social_handle">@dan.ya42</string>
+    <string name="email">daniil@mail.ru</string>
+    <string name="profile_image_description">Профиль пользователя</string>
+    <string name="phone_description">Телефон</string>
+    <string name="social_description">Социальная сеть</string>
+    <string name="email_description">Электронная почта</string>
 </resources>
 
