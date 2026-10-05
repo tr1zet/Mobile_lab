@@ -1,0 +1,14 @@
+*.iml
+.gradle/
+.gradle-user-home/
+.idea/
+.kotlin/
+local.properties
+build/
+app/build/
+.docx-review/
+.docx-review-new/
+captures/
+.externalNativeBuild/
+.cxx/
+

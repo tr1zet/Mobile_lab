@@ -1,0 +1,6 @@
+Topic photographs are from the Google Developer Training Courses sample.
+Photographer: Romain Guy.
+License: CC0 1.0 Universal.
+Source: https://github.com/google-developer-training/basic-android-kotlin-compose-training-courses
+License text: https://creativecommons.org/publicdomain/zero/1.0/
+
