@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Topics Grid</string>
-    <string name="architecture">Architecture</string>
-    <string name="crafts">Crafts</string>
-    <string name="business">Business</string>
-    <string name="culinary">Culinary</string>
-    <string name="design">Design</string>
-    <string name="fashion">Fashion</string>
-    <string name="film">Film</string>
-    <string name="gaming">Gaming</string>
-    <string name="drawing">Drawing</string>
-    <string name="lifestyle">Lifestyle</string>
-    <string name="music">Music</string>
-    <string name="painting">Painting</string>
-    <string name="photography">Photography</string>
-    <string name="tech">Tech</string>
+    <string name="app_name">Art Space</string>
+    <string name="previous">Previous</string>
+    <string name="next">Next</string>
+    <string name="artwork_description">Artwork: %1$s</string>
+    <string name="artwork_one_title">City Geometry</string>
+    <string name="artwork_one_artist">Architecture Studio</string>
+    <string name="artwork_one_year">2021</string>
+    <string name="artwork_two_title">Quiet Brushstrokes</string>
+    <string name="artwork_two_artist">Elena Moore</string>
+    <string name="artwork_two_year">2022</string>
+    <string name="artwork_three_title">Light Through Glass</string>
+    <string name="artwork_three_artist">Daniel Reed</string>
+    <string name="artwork_three_year">2023</string>
+    <string name="artwork_four_title">Designed Motion</string>
+    <string name="artwork_four_artist">North Design Lab</string>
+    <string name="artwork_four_year">2024</string>
 </resources>
 

@@ -14,6 +14,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Topics Grid"
+rootProject.name = "Art Space"
 include(":app")
 
