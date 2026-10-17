@@ -4,17 +4,14 @@
     <string name="previous">Previous</string>
     <string name="next">Next</string>
     <string name="artwork_description">Artwork: %1$s</string>
-    <string name="artwork_one_title">City Geometry</string>
-    <string name="artwork_one_artist">Architecture Studio</string>
-    <string name="artwork_one_year">2021</string>
-    <string name="artwork_two_title">Quiet Brushstrokes</string>
-    <string name="artwork_two_artist">Elena Moore</string>
-    <string name="artwork_two_year">2022</string>
-    <string name="artwork_three_title">Light Through Glass</string>
-    <string name="artwork_three_artist">Daniel Reed</string>
-    <string name="artwork_three_year">2023</string>
-    <string name="artwork_four_title">Designed Motion</string>
-    <string name="artwork_four_artist">North Design Lab</string>
-    <string name="artwork_four_year">2024</string>
+    <string name="artwork_one_title">Purple Sunset</string>
+    <string name="artwork_one_artist">Personal Collection</string>
+    <string name="artwork_one_year">2026</string>
+    <string name="artwork_two_title">Serious Passenger</string>
+    <string name="artwork_two_artist">Personal Collection</string>
+    <string name="artwork_two_year">2026</string>
+    <string name="artwork_three_title">Night Encounter</string>
+    <string name="artwork_three_artist">Personal Collection</string>
+    <string name="artwork_three_year">2026</string>
 </resources>
 

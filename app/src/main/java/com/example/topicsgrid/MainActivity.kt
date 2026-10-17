@@ -69,28 +69,22 @@ fun ArtSpaceApp(modifier: Modifier = Modifier) {
     var artworkIndex by rememberSaveable { mutableIntStateOf(1) }
     val artwork = when (artworkIndex) {
         1 -> Artwork(
-            R.drawable.architecture,
+            R.drawable.user_photo_sunset,
             R.string.artwork_one_title,
             R.string.artwork_one_artist,
             R.string.artwork_one_year
         )
         2 -> Artwork(
-            R.drawable.painting,
+            R.drawable.user_photo_tiger,
             R.string.artwork_two_title,
             R.string.artwork_two_artist,
             R.string.artwork_two_year
         )
-        3 -> Artwork(
-            R.drawable.photography,
+        else -> Artwork(
+            R.drawable.user_photo_cat,
             R.string.artwork_three_title,
             R.string.artwork_three_artist,
             R.string.artwork_three_year
-        )
-        else -> Artwork(
-            R.drawable.design,
-            R.string.artwork_four_title,
-            R.string.artwork_four_artist,
-            R.string.artwork_four_year
         )
     }
 
@@ -103,14 +97,14 @@ fun ArtSpaceApp(modifier: Modifier = Modifier) {
         if (maxWidth >= 600.dp) {
             WideArtworkLayout(
                 artwork = artwork,
-                onPrevious = { artworkIndex = if (artworkIndex == 1) 4 else artworkIndex - 1 },
-                onNext = { artworkIndex = if (artworkIndex == 4) 1 else artworkIndex + 1 }
+                onPrevious = { artworkIndex = if (artworkIndex == 1) 3 else artworkIndex - 1 },
+                onNext = { artworkIndex = if (artworkIndex == 3) 1 else artworkIndex + 1 }
             )
         } else {
             PortraitArtworkLayout(
                 artwork = artwork,
-                onPrevious = { artworkIndex = if (artworkIndex == 1) 4 else artworkIndex - 1 },
-                onNext = { artworkIndex = if (artworkIndex == 4) 1 else artworkIndex + 1 }
+                onPrevious = { artworkIndex = if (artworkIndex == 1) 3 else artworkIndex - 1 },
+                onNext = { artworkIndex = if (artworkIndex == 3) 1 else artworkIndex + 1 }
             )
         }
     }
