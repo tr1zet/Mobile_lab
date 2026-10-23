@@ -4,8 +4,6 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.annotation.DrawableRes
-import androidx.annotation.StringRes
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.BoxWithConstraints
@@ -29,9 +27,6 @@ import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableIntStateOf
-import androidx.compose.runtime.saveable.rememberSaveable
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
@@ -41,6 +36,8 @@ import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.topicsgrid.ui.theme.TopicsGridTheme
 
 class MainActivity : ComponentActivity() {
@@ -57,36 +54,29 @@ class MainActivity : ComponentActivity() {
     }
 }
 
-private data class Artwork(
-    @param:DrawableRes val imageRes: Int,
-    @param:StringRes val titleRes: Int,
-    @param:StringRes val artistRes: Int,
-    @param:StringRes val yearRes: Int
-)
+@Composable
+fun ArtSpaceApp(
+    modifier: Modifier = Modifier,
+    artSpaceViewModel: ArtSpaceViewModel = viewModel()
+) {
+    val uiState by artSpaceViewModel.uiState.collectAsStateWithLifecycle()
+
+    ArtSpaceScreen(
+        uiState = uiState,
+        onPrevious = artSpaceViewModel::showPreviousArtwork,
+        onNext = artSpaceViewModel::showNextArtwork,
+        modifier = modifier
+    )
+}
 
 @Composable
-fun ArtSpaceApp(modifier: Modifier = Modifier) {
-    var artworkIndex by rememberSaveable { mutableIntStateOf(1) }
-    val artwork = when (artworkIndex) {
-        1 -> Artwork(
-            R.drawable.user_photo_sunset,
-            R.string.artwork_one_title,
-            R.string.artwork_one_artist,
-            R.string.artwork_one_year
-        )
-        2 -> Artwork(
-            R.drawable.user_photo_tiger,
-            R.string.artwork_two_title,
-            R.string.artwork_two_artist,
-            R.string.artwork_two_year
-        )
-        else -> Artwork(
-            R.drawable.user_photo_cat,
-            R.string.artwork_three_title,
-            R.string.artwork_three_artist,
-            R.string.artwork_three_year
-        )
-    }
+internal fun ArtSpaceScreen(
+    uiState: ArtSpaceUiState,
+    onPrevious: () -> Unit,
+    onNext: () -> Unit,
+    modifier: Modifier = Modifier
+) {
+    val artwork = uiState.currentArtwork
 
     BoxWithConstraints(
         modifier = modifier
@@ -97,14 +87,14 @@ fun ArtSpaceApp(modifier: Modifier = Modifier) {
         if (maxWidth >= 600.dp) {
             WideArtworkLayout(
                 artwork = artwork,
-                onPrevious = { artworkIndex = if (artworkIndex == 1) 3 else artworkIndex - 1 },
-                onNext = { artworkIndex = if (artworkIndex == 3) 1 else artworkIndex + 1 }
+                onPrevious = onPrevious,
+                onNext = onNext
             )
         } else {
             PortraitArtworkLayout(
                 artwork = artwork,
-                onPrevious = { artworkIndex = if (artworkIndex == 1) 3 else artworkIndex - 1 },
-                onNext = { artworkIndex = if (artworkIndex == 3) 1 else artworkIndex + 1 }
+                onPrevious = onPrevious,
+                onNext = onNext
             )
         }
     }
@@ -254,6 +244,10 @@ private fun NavigationButtons(
 @Composable
 private fun ArtSpacePreview() {
     TopicsGridTheme {
-        ArtSpaceApp()
+        ArtSpaceScreen(
+            uiState = ArtSpaceUiState(),
+            onPrevious = {},
+            onNext = {}
+        )
     }
 }
