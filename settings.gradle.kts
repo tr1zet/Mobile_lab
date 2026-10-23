@@ -14,6 +14,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Tip Time"
+rootProject.name = "ActivityLifecycle"
 include(":app")
 
