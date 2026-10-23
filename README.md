@@ -1,7 +1,6 @@
-# Лабораторная работа 4 — Jetpack Compose
+# Лабораторная работа 7 — Жизненный цикл и архитектура
 
-- `4.1-compose-article` — экран статьи о Jetpack Compose;
-- `4.2-task-manager` — экран завершённых задач;
-- `4.3-compose-quadrant` — четыре информационных квадранта;
-- `4.4-my-information` — персональная визитка.
-
+- `7.1-activity-lifecycle` — журналирование методов жизненного цикла Activity;
+- `7.2-art-space-viewmodel` — Art Space с ViewModel, StateFlow и UDF;
+- `7.3-dessert-clicker-viewmodel` — Dessert Clicker с состоянием во ViewModel;
+- `7.4-unscramble-tests` — тесты ViewModel приложения Unscramble.
