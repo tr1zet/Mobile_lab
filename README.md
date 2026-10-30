@@ -1,6 +1,11 @@
-# Лабораторная работа 7 — Жизненный цикл и архитектура
+# Лабораторная работа 8 — навигация и адаптивный интерфейс
 
-- `7.1-activity-lifecycle` — журналирование методов жизненного цикла Activity;
-- `7.2-art-space-viewmodel` — Art Space с ViewModel, StateFlow и UDF;
-- `7.3-dessert-clicker-viewmodel` — Dessert Clicker с состоянием во ViewModel;
-- `7.4-unscramble-tests` — тесты ViewModel приложения Unscramble.
+- `8.1-lunch-tray-navigation` — приложение Lunch Tray с пятью экранами заказа;
+- Jetpack Navigation Compose и корректный back stack;
+- динамический заголовок AppBar и кнопка возврата;
+- отмена и отправка заказа возвращают пользователя на стартовый экран;
+- состояние заказа хранится в `OrderViewModel`.
+
+## Запуск
+
+Откройте проект в Android Studio, выполните Gradle Sync и запустите конфигурацию `app` на эмуляторе Android.
