@@ -47,4 +47,3 @@
 
 - [`8.1-lunch-tray-navigation`](../../tree/8.1-lunch-tray-navigation) — приложение Lunch Tray с навигацией между экранами заказа;
 - [`8.2-my-city-kemerovo`](../../tree/8.2-my-city-kemerovo) — путеводитель по интересным местам Кемерова с поддержкой широкого формата экрана.
-
