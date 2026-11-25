@@ -1,4 +1,4 @@
-package com.example.rickandmorty
+package com.example.tasks
 
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi

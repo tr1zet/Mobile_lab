@@ -15,5 +15,5 @@
   ~ limitations under the License.
   -->
 <resources>
-    <style name="Theme.RickAndMorty" parent="android:Theme.Material.Light.NoActionBar" />
+    <style name="Theme.Tasks" parent="android:Theme.Material.Light.NoActionBar" />
 </resources>

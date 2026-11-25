@@ -14,5 +14,5 @@
   ~ limitations under the License.
   -->
 <resources>
-    <string name="app_name">Rick and Morty</string>
+    <string name="app_name">Задачи</string>
 </resources>
