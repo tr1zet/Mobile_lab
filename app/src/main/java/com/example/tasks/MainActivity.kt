@@ -2,20 +2,24 @@ package com.example.tasks
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
+import androidx.activity.enableEdgeToEdge
 import androidx.activity.compose.setContent
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
-import com.example.tasks.ui.TasksApp
+import com.example.tasks.series.SeriesApplication
+import com.example.tasks.series.ui.SeriesApp
+import com.example.tasks.series.ui.SeriesTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val repository = (application as TasksApplication).appContainer.tasksRepository
+        enableEdgeToEdge()
+        val repository = (application as SeriesApplication).repository
 
         setContent {
-            MaterialTheme {
+            SeriesTheme {
                 Surface(color = MaterialTheme.colorScheme.background) {
-                    TasksApp(repository = repository)
+                    SeriesApp(repository = repository)
                 }
             }
         }

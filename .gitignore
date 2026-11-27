@@ -34,3 +34,9 @@ proguard-project.txt
 # Android Studio/IDEA
 *.iml
 .idea
+
+# Local build caches and verification logs
+.gradle-user-home/
+.kotlin/
+build-semestrovaya*.log
+emulator-semestrovaya*.log

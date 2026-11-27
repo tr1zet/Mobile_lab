@@ -25,7 +25,7 @@ android {
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.example.tasks"
+        applicationId = "com.example.serialoscope"
         minSdk = 24
         targetSdk = 35
         versionCode = 1
@@ -64,6 +64,10 @@ android {
     }
 }
 
+ksp {
+    arg("room.schemaLocation", "$projectDir/schemas")
+}
+
 dependencies {
 
     coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.1.4")
@@ -77,13 +81,18 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.8.7")
     implementation("androidx.lifecycle:lifecycle-runtime-compose:2.8.7")
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.8.7")
-    implementation("androidx.datastore:datastore-preferences:1.1.1")
     implementation("androidx.room:room-ktx:2.6.1")
     implementation("androidx.room:room-runtime:2.6.1")
+    implementation("androidx.navigation:navigation-compose:2.8.5")
+    implementation("com.squareup.retrofit2:retrofit:2.11.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.11.0")
+    implementation("io.coil-kt:coil-compose:2.7.0")
     ksp("androidx.room:room-compiler:2.6.1")
 
     testImplementation("junit:junit:4.13.2")
     testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.9.0")
+    androidTestImplementation("androidx.test:runner:1.6.2")
+    androidTestImplementation("androidx.test.ext:junit:1.2.1")
 
     debugImplementation("androidx.compose.ui:ui-test-manifest")
     debugImplementation("androidx.compose.ui:ui-tooling")

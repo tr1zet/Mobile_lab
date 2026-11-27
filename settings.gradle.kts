@@ -27,5 +27,5 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "Tasks"
+rootProject.name = "Serialoscope"
 include(":app")
